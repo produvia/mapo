@@ -1,0 +1,60 @@
+Field,Name,Description,Type,Size
+1,rep_no,Assessment Report Number,Text,5
+2,cnf_prd,Confidential Period,Text,1
+3,aff_dt,Affidavit Date,Date/Time,8
+4,gwrk_typs,General Work Codes,Text,30
+5,claim_val,Claim Value,Decimal,16
+6,title,Title of Report,Memo,-
+7,rep_yr,Report Year,Text,4
+8,wrk_yr,Work Year,Text,4
+9,conf_ldate,no data,Text,30
+10,conf_adate,Date Off Confidental,Text,10
+11,aff_ndate,no data,Decimal,16
+12,aff_adate,,Text,10
+13,page_ct,Page Count,Decimal,16
+14,prpty_nm,Property Name,Text,50
+15,nts_maps,NTS Maps (1:50K),Text,32
+16,bcgs_maps,BCGS Map (1:20K),Text,32
+26,lat83_deg,Latitude Degrees (NAD83),Decimal,16
+27,lat83_min,Latitude Minutes (NAD83),Decimal,16
+28,lat83_sec,Latitude Seconds (NAD83),Decimal,16
+29,lon83_deg,Longitude Degrees (NAD83),Decimal,16
+30,lon83_min,Longitude Minutes (NAD83),Decimal,16
+31,lon83_sec,Longitude Seconds (NAD83),Decimal,16
+32,zone83,UTM Zone (NAD83),Decimal,16
+33,north83,Northing (NAD83),Decimal,16
+34,east83,Easting (NAD83),Decimal,16
+35,lat83,Latitude Decimal (NAD83),Decimal,16
+36,long83,Longitude Decimal (NAD83),Decimal,16
+37,com_cds,Commodity Codes,Text,30
+38,camp_cd,Mining Camp Code,Text,3
+39,geo_sum,Geological Summary,Memo,-
+40,reg_geo,Regional Geologist Area,Text,3
+41,info_cls,Information Class,Text,1
+42,mdiv_cds,Mining Division Code,Text,20
+43,mdiv_nmx,Mining Division,Memo,-
+44,mdiv_nms,Mining Division,Memo,-
+45,claim_nmx,Claim Names,Memo,-
+46,minf_nox,MINFILE Numbers,Memo,-
+47,camp_nm,Mining Camp Name,Text,40
+48,claim_nms,Claim Names,Memo,-
+49,gwrk_nmx,General Work Categories,Memo,-
+50,gwrk_nms,General Work Categories,Memo,-
+51,rel_ars,Related Assessment Reports,Memo,-
+52,oper_nms,Operator Names,Memo,-
+53,own_nms,Owner Names,Memo,-
+54,auth_nms,Author Names,Memo,-
+55,com_nms,Commodity Names,Memo,-
+56,kwl_nms,Keywords,Memo,-
+57,MERG_SPENT,Work Cost Actual Dollars,Double,8
+58,DOLL_INX,CPI 1986,Double,8
+59,doll_86,Work Cost 1986 Dollars,Double,8
+60,CPIdex1992,CPI 1992,Double,8
+61,doll_92,Work Cost 1992 Dollars,Double,8
+62,CPIdex2002,CPI 2002,Double,8
+63,doll_02,Work Cost 2002 Dollars,Double,8
+64,URL,URL Link to ARIS Report,Text,80
+aris.csv metadata,,,,
+British Columbia Geological Survey,,,,
+"Ministry of Energy, Mines and Petroleum Resources",,,,
+"Date of last update: October 3, 2017",,,,
