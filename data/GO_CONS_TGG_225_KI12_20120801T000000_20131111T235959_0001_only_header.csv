@@ -1,0 +1,66 @@
+File_Version: 1.0
+
+File_Class: CONS final product
+File_Format: ASCII
+Mission_Name: GOCE
+
+File_Description: Gravity gradient grids from topography at fixed height of 225 km above ellipsoid given in LNOF
+File_Name: GO_CONS_TGG_225_KI12_20120801T000000_20131111T235959_0001.TGZ (Global GOCE gravity gradient grids above the ellipsoid for geophysical and geodetic applications)
+
+ Data_Period:
+     Start-Date (yyyymmdd):  20120801
+     GPS-Time-Start: 1027814416
+
+     Stop-Date (yyyymmdd):  20131111
+     GPS-Time-Stop:  1068163216 
+
+ Input_Data:
+              - RWI_TOPO_2012_plusGRS80 (Topographic potential + GRS80)
+              - References:
+                Grombein, T.; Luo, X.; Seitz, K.; Heck, B. (2014): A wavelet-based assessment of 
+                topographic-isostatic reductions for GOCE gravity gradients. Surveys in Geophysics
+                35(4):959–982, DOI: 10.1007/s10712-014-9283-1 
+                Grombein, T.; Seitz, K.; Heck, B. (2013): Optimized formulas for the gravitational
+                field of a tesseroid. Journal of Geodesy 87(7):645–660, DOI: 10.1007/s00190-013-0636-1 
+
+ Data_Descriptor:
+            (1) Longitude in degree (geographic coordinates)
+            (2) Latitude in degree (geographic coordinates)
+          (3-8) Gravity gradients XX, XY, XZ, YY, YZ, ZZ in the LNOF (in Eötvös)
+
+ Data_Processing:
+             Topographic spherical harmonic coefficients are used to compute gravity gradients in 
+             equiangular grids of 0.2 degree on a homothetic ellipsoid that has the same eccentricity as the
+             WGS84 ellipsoid and a semi-major axis a_H = a_WGS84 + H, where a_WGS84 = 6378.137 km
+             and H is 225 km or 255 km. In practice this means that the height h above the WGS84 
+             ellipsoid slightly varies from equator to the poles. For the lower grids, for example, the 
+             height is h = 225 km at the equator and h ≈ 224.25 km at the poles. 
+             The gradients in this file can be used for topographic reduction of the GOCE/GRACE at 225 km.
+end of header #################################################################################
+LONGITUDE LATITUDE G_GRAD_XX G_GRAD_XY G_GRAD_XZ G_GRAD_YY G_GRAD_YZ G_GRAD_ZZ
+  -1.8000000e+02   8.9900000e+01   8.9496824e-01  -4.4697895e-01   2.4067941e-01   2.0947732e+00   1.0031303e+00  -2.9897415e+00
+  -1.7980000e+02   8.9900000e+01   8.9176327e-01  -4.4288060e-01   2.4409560e-01   2.0978021e+00   1.0024707e+00  -2.9895654e+00
+  -1.7960000e+02   8.9900000e+01   8.8858656e-01  -4.3876016e-01   2.4751003e-01   2.1008033e+00   1.0017998e+00  -2.9893898e+00
+  -1.7940000e+02   8.9900000e+01   8.8543826e-01  -4.3461784e-01   2.5092266e-01   2.1037766e+00   1.0011175e+00  -2.9892149e+00
+  -1.7920000e+02   8.9900000e+01   8.8231853e-01  -4.3045382e-01   2.5433345e-01   2.1067220e+00   1.0004239e+00  -2.9890405e+00
+  -1.7900000e+02   8.9900000e+01   8.7922752e-01  -4.2626830e-01   2.5774238e-01   2.1096392e+00   9.9971891e-01  -2.9888667e+00
+  -1.7880000e+02   8.9900000e+01   8.7616540e-01  -4.2206146e-01   2.6114940e-01   2.1125281e+00   9.9900260e-01  -2.9886935e+00
+  -1.7860000e+02   8.9900000e+01   8.7313232e-01  -4.1783350e-01   2.6455447e-01   2.1153885e+00   9.9827496e-01  -2.9885208e+00
+  -1.7840000e+02   8.9900000e+01   8.7012843e-01  -4.1358462e-01   2.6795757e-01   2.1182203e+00   9.9753599e-01  -2.9883487e+00
+  -1.7820000e+02   8.9900000e+01   8.6715388e-01  -4.0931501e-01   2.7135866e-01   2.1210234e+00   9.9678569e-01  -2.9881773e+00
+  -1.7800000e+02   8.9900000e+01   8.6420883e-01  -4.0502487e-01   2.7475770e-01   2.1237975e+00   9.9602406e-01  -2.9880063e+00
+  -1.7780000e+02   8.9900000e+01   8.6129342e-01  -4.0071440e-01   2.7815466e-01   2.1265426e+00   9.9525112e-01  -2.9878360e+00
+  -1.7760000e+02   8.9900000e+01   8.5840780e-01  -3.9638379e-01   2.8154951e-01   2.1292585e+00   9.9446685e-01  -2.9876663e+00
+  -1.7740000e+02   8.9900000e+01   8.5555212e-01  -3.9203326e-01   2.8494220e-01   2.1319450e+00   9.9367127e-01  -2.9874971e+00
+  -1.7720000e+02   8.9900000e+01   8.5272653e-01  -3.8766300e-01   2.8833270e-01   2.1346021e+00   9.9286438e-01  -2.9873286e+00
+  -1.7700000e+02   8.9900000e+01   8.4993116e-01  -3.8327321e-01   2.9172098e-01   2.1372295e+00   9.9204618e-01  -2.9871606e+00
+  -1.7680000e+02   8.9900000e+01   8.4716617e-01  -3.7886410e-01   2.9510700e-01   2.1398271e+00   9.9121668e-01  -2.9869933e+00
+  -1.7660000e+02   8.9900000e+01   8.4443169e-01  -3.7443587e-01   2.9849072e-01   2.1423948e+00   9.9037588e-01  -2.9868265e+00
+  -1.7640000e+02   8.9900000e+01   8.4172786e-01  -3.6998873e-01   3.0187212e-01   2.1449324e+00   9.8952378e-01  -2.9866603e+00
+  -1.7620000e+02   8.9900000e+01   8.3905482e-01  -3.6552289e-01   3.0525115e-01   2.1474399e+00   9.8866039e-01  -2.9864947e+00
+  -1.7600000e+02   8.9900000e+01   8.3641270e-01  -3.6103855e-01   3.0862777e-01   2.1499170e+00   9.8778572e-01  -2.9863298e+00
+  -1.7580000e+02   8.9900000e+01   8.3380165e-01  -3.5653593e-01   3.1200197e-01   2.1523637e+00   9.8689976e-01  -2.9861654e+00
+  -1.7560000e+02   8.9900000e+01   8.3122180e-01  -3.5201523e-01   3.1537369e-01   2.1547798e+00   9.8600252e-01  -2.9860016e+00
+  -1.7540000e+02   8.9900000e+01   8.2867328e-01  -3.4747666e-01   3.1874290e-01   2.1571652e+00   9.8509400e-01  -2.9858385e+00
+  -1.7520000e+02   8.9900000e+01   8.2615622e-01  -3.4292044e-01   3.2210957e-01   2.1595197e+00   9.8417422e-01  -2.9856759e+00
+
