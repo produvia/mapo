@@ -61,3 +61,17 @@ Method 2 creates `MINFILE_Minerals.csv` (see above).
 
 1. Visit BC Data Catalogue API here: <https://catalogue.data.gov.bc.ca/dataset/bc-data-catalogue-api>
 2. Create a script to access the "MINFILE Mineral Occurrence Database" via API
+
+## Run it on local host
+1. Create environment using pipenv with python 3.6.*
+    ```
+    pipenv --python python3.6
+    ```
+2. Enter pipenv environment
+    ```
+    pipenv shell
+    ```
+3. Install packages (for development)
+    ```
+    pipenv install -d
+    ```  
