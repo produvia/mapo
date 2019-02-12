@@ -6,7 +6,7 @@ Mapo AI is a virtual exploration assistant that manages your mineral exploration
 
 # Data
 
-The `data` folder contains two datasets:
+The `data` folder contains two mineral occurence datasets from British Columbia, Canada:
 
 # 1. ARIS Mineral Assessment Report Index Dataset
 
@@ -62,7 +62,8 @@ Method 2 creates `MINFILE_Minerals.csv` (see above).
 1. Visit BC Data Catalogue API here: <https://catalogue.data.gov.bc.ca/dataset/bc-data-catalogue-api>
 2. Create a script to access the "MINFILE Mineral Occurrence Database" via API
 
-## Run it on local host
+# Run it on local host
+
 1. Create environment using pipenv with python 3.6.*
     ```
     pipenv --python python3.6
@@ -74,4 +75,4 @@ Method 2 creates `MINFILE_Minerals.csv` (see above).
 3. Install packages (for development)
     ```
     pipenv install -d
-    ```  
+    ```
