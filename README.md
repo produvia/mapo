@@ -6,32 +6,28 @@ Mapo AI is a virtual exploration assistant that manages your mineral exploration
 
 # Data
 
-The `data` folder contains two mineral occurence datasets from British Columbia, Canada:
+The `data` folder contains mineral occurence datasets for:
 
-# 1. ARIS Mineral Assessment Report Index Dataset
+1. British Columbia, Canada
+2. Alberta, Canada
 
-- Files: ariasdata.csv and ariasdata.csv
+## British Columbia, Canada
+
+### 1. ARIS Mineral Assessment Report Index Dataset
+
+`ariasdata.csv` and `arismetadata.csv`
+
 - Number of data records: 35,898
 - Date of last update: Unknown
-- Source of Data: Unknown
 
-# 2. MINFILE Mineral Occurrence Dataset
+### 2. MINFILE Mineral Occurrence Dataset
 
-## MINFILE.csv
+`MINFILE.csv`
 
 - Number of records: 14,817
 - Record last modified: 2018-11-27
 
-## MINFILE_Minerals.csv
-
-- Number of data records: 14,646
-- Record last modified: 2017-12-24
-
-## Manual Access via Web App
-
-### Method 1
-
-Method 1 creates `MINFILE.csv` (see above).
+To re-create `MINFILE.csv`, perform the following:
 
 1. Go here: <http://apps.gov.bc.ca/pub/dwds/addProducts.do>
 2. Search "MINFILE Mineral Occurrence Database"
@@ -49,30 +45,48 @@ Method 1 creates `MINFILE.csv` (see above).
 14. Open "MINFIL_MINERAL_FILE" folder
 15. Use "MINFILE.csv" for data analysis
 
-### Method 2
+## Alberta, Canada
 
-Method 2 creates `MINFILE_Minerals.csv` (see above).
+### 1. Metallic Mineral Occurrence Dataset
 
-1. Go here: <https://catalogue.data.gov.bc.ca/dataset/minfile-mineral-occurrence-database/resource/120d5ee6-bff5-4cbe-b106-e419c790c395>
-2. Click "Access / Download" button
-3. Use `minfile_mineral.csv` for data analysis
+`Metallic_Mineral_Occurrence.csv`
 
-## Programmatic Access via API
+- [Website](https://geology-ags-aer.opendata.arcgis.com/datasets/metallic-mineral-occurrence)
+- Number of records: 385
+- Record last modified: 2016-09-23
 
-1. Visit BC Data Catalogue API here: <https://catalogue.data.gov.bc.ca/dataset/bc-data-catalogue-api>
-2. Create a script to access the "MINFILE Mineral Occurrence Database" via API
-
-# Run it on local host
+# Run on Local Machine
 
 1. Create environment using pipenv with python 3.6.*
+
     ```
     pipenv --python python3.6
     ```
 2. Enter pipenv environment
+
     ```
     pipenv shell
     ```
 3. Install packages (for development)
+
     ```
     pipenv install -d
     ```
+
+# Perform Exploratory Data Analysis (EDA)
+
+1. To explore the existing datasets, review the `eda` folder
+2. To visualize mineral occurrence data on a map, look for: `latitude`, `longitude`, `depth`, or `elevation` values. Use the guide below to get started.
+
+## British Columbia, Canada
+
+`MINFILE.csv`
+
+- Relevant columns: `DECIMAL_LATITUDE`, `DECIMAL_LONGITUDE`, `ELEVATION`, `COMMODITY_DESCRIPTION1`, `COMMODITY_DESCRIPTION2`, `COMMODITY_DESCRIPTION3`, `COMMODITY_DESCRIPTION4`, `COMMODITY_DESCRIPTION5`, `COMMODITY_DESCRIPTION6`, `COMMODITY_DESCRIPTION7`, `COMMODITY_DESCRIPTION8`
+- Missing columns: year of discovery
+
+## Alberta, Canada
+
+`Metallic_Mineral_Occurrence.csv`
+
+- Relevant columns: `Long_NAD83`, `Lat_NAD83`, `Depth_m`, `Comm_1`, `Comm_2`, `Location`, `Ref_AGS`
