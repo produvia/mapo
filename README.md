@@ -8,10 +8,10 @@ Mapo AI is a virtual exploration assistant that manages your mineral exploration
 
 The `data` folder contains mineral occurence datasets for:
 
-1. British Columbia, Canada
-2. Alberta, Canada
+1. Canada > British Columbia
+2. Canada > Alberta
 
-## British Columbia, Canada
+## Canada > British Columbia
 
 ### 1. ARIS Mineral Assessment Report Index Dataset
 
@@ -45,7 +45,23 @@ To re-create `MINFILE.csv`, perform the following:
 14. Open "MINFIL_MINERAL_FILE" folder
 15. Use "MINFILE.csv" for data analysis
 
-## Alberta, Canada
+### 3. Mineral Resources Data System (MRDS) Dataset
+
+`mrds.csv`
+
+- Number of records: 244
+- Record last modified: Unknown
+
+To re-create `mrds.csv`, perform the following:
+
+1. Go here: <https://mrdata.usgs.gov/mrds/geo-inventory.php>
+2. Click the "North America" link
+3. Click the "Canada" link
+4. Select "CSV" under Format menu
+5. Click "Download" button
+6. Look for "British Columbia" rows under the "state" column
+
+## Canada > Alberta
 
 ### 1. Metallic Mineral Occurrence Dataset
 
@@ -54,6 +70,22 @@ To re-create `MINFILE.csv`, perform the following:
 - [Website](https://geology-ags-aer.opendata.arcgis.com/datasets/metallic-mineral-occurrence)
 - Number of records: 385
 - Record last modified: 2016-09-23
+
+### 2. Mineral Resources Data System (MRDS) Dataset
+
+`mrds.csv`
+
+- Number of records: 24
+- Record last modified: Unknown
+
+To re-create `mrds.csv`, perform the following:
+
+1. Go here: <https://mrdata.usgs.gov/mrds/geo-inventory.php>
+2. Click the "North America" link
+3. Click the "Canada" link
+4. Select "CSV" under Format menu
+5. Click "Download" button
+6. Look for "Alberta" rows under the "state" column
 
 # Run on Local Machine
 
@@ -76,7 +108,7 @@ To re-create `MINFILE.csv`, perform the following:
 # Perform Exploratory Data Analysis (EDA)
 
 1. To explore the existing datasets, review the `eda` folder
-2. To visualize mineral occurrence data on a map, look for: `latitude`, `longitude`, `depth`, or `elevation` values. Use the guide below to get started.
+2. To visualize mineral occurrence data on a map, look for: Latitude, Longitude, Depth, or Elevation values. Use the guide below to get started.
 
 ## British Columbia, Canada
 
@@ -85,8 +117,18 @@ To re-create `MINFILE.csv`, perform the following:
 - Relevant columns: `DECIMAL_LATITUDE`, `DECIMAL_LONGITUDE`, `ELEVATION`, `COMMODITY_DESCRIPTION1`, `COMMODITY_DESCRIPTION2`, `COMMODITY_DESCRIPTION3`, `COMMODITY_DESCRIPTION4`, `COMMODITY_DESCRIPTION5`, `COMMODITY_DESCRIPTION6`, `COMMODITY_DESCRIPTION7`, `COMMODITY_DESCRIPTION8`
 - Missing columns: year of discovery
 
+`mrds.csv`
+
+- Relevant columns: `latitude`, `longitude`, `commod1`, `commod2`, `commod3`, `disc_yr`
+- Missing columns: depth or elevation of discovery
+
 ## Alberta, Canada
 
 `Metallic_Mineral_Occurrence.csv`
 
 - Relevant columns: `Long_NAD83`, `Lat_NAD83`, `Depth_m`, `Comm_1`, `Comm_2`, `Location`, `Ref_AGS`
+
+`mrds.csv`
+
+- Relevant columns: `latitude`, `longitude`, `commod1`, `commod2`, `commod3`, `disc_yr`
+- Missing columns: depth or elevation of discovery
